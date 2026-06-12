@@ -12,8 +12,6 @@
 :root{--bg:#0d0d0d;--surface:#161616;--surface2:#1f1f1f;--border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.14);--text:#f0f0f0;--text2:#888;--text3:#555;--yellow:#f5c842;--green:#2ecc71;--red:#e74c3c;--amber:#e8a020;--yellow-dim:rgba(245,200,66,0.12);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.5;min-height:100vh;}
-
-/* HEADER */
 header{border-bottom:1px solid var(--border);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;background:rgba(13,13,13,0.95);backdrop-filter:blur(8px);z-index:100;}
 .logo{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;color:var(--yellow);display:flex;align-items:center;gap:10px;}
 .header-right{display:flex;align-items:center;gap:14px;}
@@ -21,9 +19,7 @@ header{border-bottom:1px solid var(--border);padding:0 1.5rem;display:flex;align
 .streak-num{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--yellow);letter-spacing:1px;}
 .icon-btn{background:transparent;border:none;cursor:pointer;color:var(--text2);font-size:18px;padding:4px;display:flex;align-items:center;transition:color .15s;}
 .icon-btn:hover{color:var(--yellow);}
-
-/* MAIN */
-main{max-width:720px;margin:0 auto;padding:2rem 1rem 4rem;}
+main{max-width:800px;margin:0 auto;padding:2rem 1rem 4rem;}
 .mode-tabs{display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:4px;margin-bottom:1.5rem;width:fit-content;}
 .tab{padding:7px 22px;font-size:13px;font-weight:500;border:none;border-radius:7px;background:transparent;color:var(--text2);cursor:pointer;transition:background .15s,color .15s;font-family:'Inter',sans-serif;}
 .tab.active{background:var(--yellow);color:#000;}
@@ -33,8 +29,6 @@ main{max-width:720px;margin:0 auto;padding:2rem 1rem 4rem;}
 .legend{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:1.25rem;}
 .leg{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text2);}
 .leg-dot{width:11px;height:11px;border-radius:3px;flex-shrink:0;}
-
-/* SEARCH */
 .search-wrap{position:relative;margin-bottom:1rem;}
 #search{width:100%;padding:13px 16px;font-size:15px;font-family:'Inter',sans-serif;background:var(--surface);border:1px solid var(--border2);border-radius:10px;color:var(--text);outline:none;transition:border-color .15s;}
 #search:focus{border-color:var(--yellow);}
@@ -44,15 +38,11 @@ main{max-width:720px;margin:0 auto;padding:2rem 1rem 4rem;}
 .drop-item{padding:11px 16px;font-size:14px;cursor:pointer;color:var(--text);border-bottom:1px solid var(--border);transition:background .1s;}
 .drop-item:last-child{border-bottom:none;}
 .drop-item:hover{background:rgba(245,200,66,.08);color:var(--yellow);}
-
-/* HINT */
 .hint-row{margin-bottom:.75rem;display:flex;align-items:center;gap:10px;min-height:36px;}
 .hint-btn{padding:7px 16px;font-size:12px;font-weight:500;font-family:'Inter',sans-serif;border-radius:8px;border:1px solid rgba(245,200,66,.35);background:transparent;color:var(--yellow);cursor:pointer;transition:background .15s,opacity .15s;display:flex;align-items:center;gap:6px;}
 .hint-btn:hover:not(:disabled){background:var(--yellow-dim);}
 .hint-btn:disabled{opacity:.35;cursor:not-allowed;border-color:var(--border);color:var(--text3);}
 .hint-locked{font-size:12px;color:var(--text3);}
-
-/* STATUS */
 .status-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem;min-height:28px;flex-wrap:wrap;gap:6px;}
 #msg{font-size:15px;font-weight:600;color:var(--text);min-height:20px;}
 #msg.win{color:var(--green);}
@@ -62,21 +52,17 @@ main{max-width:720px;margin:0 auto;padding:2rem 1rem 4rem;}
 .pip{width:8px;height:8px;border-radius:50%;background:var(--border2);transition:background .2s;}
 .pip.used{background:var(--text3);}
 .pip.correct{background:var(--green);}
-
-/* TABLE */
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:12px;margin-bottom:1rem;}
-table{width:100%;border-collapse:collapse;min-width:500px;}
-thead th{padding:10px 6px;font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1px;text-align:center;border-bottom:1px solid var(--border);background:var(--surface);white-space:nowrap;}
-thead th:first-child{text-align:left;padding-left:14px;min-width:130px;}
+table{width:100%;border-collapse:collapse;min-width:640px;}
+thead th{padding:10px 4px;font-size:9px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.8px;text-align:center;border-bottom:1px solid var(--border);background:var(--surface);white-space:nowrap;}
+thead th:first-child{text-align:left;padding-left:12px;min-width:120px;}
 tbody tr{transition:background .1s;}
 tbody tr:hover{background:rgba(255,255,255,.02);}
-.row-label{padding:8px 8px 8px 14px;font-size:13px;font-weight:500;color:var(--text);vertical-align:middle;white-space:nowrap;border-bottom:1px solid var(--border);}
+.row-label{padding:7px 6px 7px 12px;font-size:12px;font-weight:500;color:var(--text);vertical-align:middle;white-space:nowrap;border-bottom:1px solid var(--border);}
 tbody tr:last-child .row-label,tbody tr:last-child .cell{border-bottom:none;}
-.cell{padding:5px 4px;text-align:center;vertical-align:middle;border-bottom:1px solid var(--border);}
-
-/* TILE FLIP ANIMATION */
+.cell{padding:4px 3px;text-align:center;vertical-align:middle;border-bottom:1px solid var(--border);}
 .tile-wrap{perspective:400px;}
-.tile{border-radius:6px;font-size:10px;font-weight:600;line-height:1.25;min-height:42px;min-width:60px;display:flex;align-items:center;justify-content:center;text-align:center;word-break:break-word;letter-spacing:.2px;backface-visibility:hidden;transform-origin:center;}
+.tile{border-radius:5px;font-size:9px;font-weight:600;line-height:1.2;min-height:40px;min-width:54px;display:flex;align-items:center;justify-content:center;text-align:center;word-break:break-word;letter-spacing:.1px;backface-visibility:hidden;}
 .tile.pending{background:var(--surface2);border:1px solid var(--border2);color:var(--text3);}
 .tile.g{background:rgba(46,204,113,.2);color:#2ecc71;border:1px solid rgba(46,204,113,.35);}
 .tile.y{background:rgba(245,200,66,.18);color:#f5c842;border:1px solid rgba(245,200,66,.3);}
@@ -85,8 +71,6 @@ tbody tr:last-child .row-label,tbody tr:last-child .cell{border-bottom:none;}
 .tile.flipping{animation:flipIn .5s ease forwards;}
 @keyframes rowSlide{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
 .row-entering{animation:rowSlide .2s ease forwards;}
-
-/* ACTIONS */
 .action-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:.75rem;align-items:center;}
 .btn{padding:10px 20px;font-size:13px;font-weight:500;font-family:'Inter',sans-serif;border-radius:8px;border:1px solid var(--border2);background:transparent;color:var(--text);cursor:pointer;transition:background .15s;display:flex;align-items:center;gap:7px;}
 .btn:hover{background:var(--surface2);}
@@ -96,28 +80,20 @@ tbody tr:last-child .row-label,tbody tr:last-child .cell{border-bottom:none;}
 .btn-new:hover{background:var(--yellow-dim);}
 .copied-toast{font-size:12px;color:var(--green);opacity:0;transition:opacity .3s;}
 .copied-toast.show{opacity:1;}
-
-/* REVEAL CARD */
-.reveal-card{background:var(--surface);border:1px solid var(--border2);border-radius:12px;padding:1.25rem;display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;}
-.reveal-info h4{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--yellow);margin-bottom:.2rem;}
-.reveal-info p{font-size:12px;color:var(--text2);}
-
-/* HOW TO PLAY */
+.reveal-card{background:var(--surface);border:1px solid var(--border2);border-radius:12px;padding:1.25rem;margin-bottom:.75rem;}
+.reveal-card h4{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--yellow);margin-bottom:.2rem;}
+.reveal-card p{font-size:12px;color:var(--text2);}
 .how-section{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);}
 .how-section h3{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:var(--yellow);margin-bottom:1rem;}
 .how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;}
 .how-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem;}
 .how-card .num{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--yellow);line-height:1;margin-bottom:.4rem;}
 .how-card p{font-size:12px;color:var(--text2);line-height:1.5;}
-
-/* MODAL BASE */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:flex;align-items:center;justify-content:center;padding:1rem;}
-.modal{background:var(--surface2);border:1px solid var(--border2);border-radius:16px;padding:1.75rem;max-width:420px;width:100%;box-shadow:0 24px 64px rgba(0,0,0,.8);max-height:90vh;overflow-y:auto;}
+.modal{background:var(--surface2);border:1px solid var(--border2);border-radius:16px;padding:1.75rem;max-width:440px;width:100%;box-shadow:0 24px 64px rgba(0,0,0,.8);max-height:90vh;overflow-y:auto;}
 .modal-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--yellow);margin-bottom:1.25rem;display:flex;align-items:center;justify-content:space-between;}
 .modal-close{background:transparent;border:none;color:var(--text2);font-size:20px;cursor:pointer;line-height:1;padding:2px 6px;}
 .modal-close:hover{color:var(--text);}
-
-/* STATS MODAL */
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:1.5rem;}
 .stat-box{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:.75rem .5rem;text-align:center;}
 .stat-num{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--yellow);line-height:1;}
@@ -128,8 +104,6 @@ tbody tr:last-child .row-label,tbody tr:last-child .cell{border-bottom:none;}
 .dist-bar-wrap{flex:1;background:var(--surface);border-radius:4px;height:22px;overflow:hidden;}
 .dist-bar{height:100%;background:var(--text3);border-radius:4px;display:flex;align-items:center;padding:0 8px;font-size:11px;font-weight:600;color:#fff;transition:width .6s ease;min-width:24px;}
 .dist-bar.highlight{background:var(--green);}
-
-/* ARCHIVE MODAL */
 .archive-month{margin-bottom:1.25rem;}
 .archive-month-title{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:var(--text2);margin-bottom:.6rem;}
 .archive-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;}
@@ -144,23 +118,17 @@ tbody tr:last-child .row-label,tbody tr:last-child .cell{border-bottom:none;}
 .archive-day.today{border-color:var(--yellow);}
 .archive-day.future{opacity:.25;cursor:default;pointer-events:none;}
 .archive-day.empty{border:none;background:transparent;cursor:default;}
-
-/* ARCHIVE GAME OVERLAY */
 .archive-banner{background:rgba(232,160,32,.12);border:1px solid rgba(232,160,32,.3);border-radius:8px;padding:.6rem 1rem;font-size:12px;color:var(--amber);margin-bottom:.75rem;display:flex;align-items:center;justify-content:space-between;gap:8px;}
 .archive-back{background:transparent;border:1px solid var(--border2);border-radius:6px;padding:4px 12px;font-size:12px;color:var(--text2);cursor:pointer;font-family:'Inter',sans-serif;}
-.archive-back:hover{color:var(--text);border-color:var(--border2);}
-
+.archive-back:hover{color:var(--text);}
 /* HINT POPUP */
-.hint-popup{background:var(--surface2);border:1px solid var(--border2);border-radius:14px;padding:1.5rem;max-width:340px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.8);}
+.hint-popup{background:var(--surface2);border:1px solid var(--border2);border-radius:14px;padding:1.75rem;max-width:360px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.8);}
 .hint-popup h3{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:var(--yellow);margin-bottom:1rem;}
-.hint-attr{font-size:13px;color:var(--text2);margin-bottom:.4rem;}
-.hint-attr span{color:var(--yellow);font-weight:600;}
-.hint-close{margin-top:1.25rem;padding:9px 24px;font-size:13px;font-weight:500;font-family:'Inter',sans-serif;border-radius:8px;border:1px solid var(--border2);background:transparent;color:var(--text);cursor:pointer;}
+.hint-bio{font-size:14px;color:var(--text);line-height:1.6;margin-bottom:1rem;font-style:italic;}
+.hint-close{margin-top:.5rem;padding:9px 24px;font-size:13px;font-weight:500;font-family:'Inter',sans-serif;border-radius:8px;border:1px solid var(--border2);background:transparent;color:var(--text);cursor:pointer;}
 .hint-close:hover{background:var(--surface);}
-
 footer{text-align:center;font-size:11px;color:var(--text3);padding:2rem 1rem;border-top:1px solid var(--border);margin-top:3rem;}
-
-@media(max-width:480px){
+@media(max-width:520px){
   header{padding:0 1rem;}
   .logo{font-size:22px;}
   main{padding:1.25rem .75rem 3rem;}
@@ -172,7 +140,6 @@ footer{text-align:center;font-size:11px;color:var(--text3);padding:2rem 1rem;bor
 </style>
 </head>
 <body>
-
 <header>
   <div class="logo">
     <svg width="28" height="20" viewBox="0 0 56 40" fill="none" aria-hidden="true">
@@ -181,41 +148,36 @@ footer{text-align:center;font-size:11px;color:var(--text3);padding:2rem 1rem;bor
     BATMANDLE
   </div>
   <div class="header-right">
-    <button class="icon-btn" onclick="openArchive()" title="Archive" aria-label="Archive">📅</button>
-    <button class="icon-btn" onclick="openStats()" title="Statistics" aria-label="Statistics">📊</button>
+    <button class="icon-btn" onclick="openArchive()" title="Archive">📅</button>
+    <button class="icon-btn" onclick="openStats()" title="Statistics">📊</button>
     <div class="streak-badge"><span>Streak</span><span class="streak-num" id="streak-display">0</span></div>
   </div>
 </header>
 
 <main>
   <div class="mode-tabs" role="tablist">
-    <button class="tab active" id="btn-daily" role="tab" aria-selected="true" onclick="setMode('daily')">Daily</button>
-    <button class="tab" id="btn-free" role="tab" aria-selected="false" onclick="setMode('free')">Free play</button>
+    <button class="tab active" id="btn-daily" role="tab" onclick="setMode('daily')">Daily</button>
+    <button class="tab" id="btn-free" role="tab" onclick="setMode('free')">Free play</button>
   </div>
-
   <div class="intro">
     <h2 id="mode-label">TODAY'S CHARACTER</h2>
     <div class="daily-label" id="date-label"></div>
   </div>
   <div id="archive-banner-area"></div>
-
   <div class="legend">
     <div class="leg"><div class="leg-dot" style="background:var(--green)"></div>Exact match</div>
     <div class="leg"><div class="leg-dot" style="background:var(--yellow)"></div>Close / partial</div>
     <div class="leg"><div class="leg-dot" style="background:var(--red)"></div>Wrong</div>
     <div class="leg" style="color:var(--text3);font-size:11px">Year arrows = higher ↑ / lower ↓</div>
   </div>
-
   <div class="search-wrap">
     <input id="search" type="text" placeholder="Type a character name…" autocomplete="off" aria-label="Search for a character"/>
     <div id="dropdown" role="listbox"></div>
   </div>
-
   <div class="hint-row">
     <button class="hint-btn" id="hint-btn" onclick="showHint()" disabled>🦇 Hint</button>
     <span class="hint-locked" id="hint-locked">Unlocks after 3 guesses</span>
   </div>
-
   <div class="status-bar">
     <div id="msg" aria-live="polite"></div>
     <div style="display:flex;align-items:center;gap:10px">
@@ -223,11 +185,9 @@ footer{text-align:center;font-size:11px;color:var(--text3);padding:2rem 1rem;bor
       <div id="guesses-left"></div>
     </div>
   </div>
-
   <div id="reveal-area"></div>
   <div class="action-row" id="action-row"></div>
   <div class="copied-toast" id="copied-toast">Copied to clipboard!</div>
-
   <div class="table-wrap" style="margin-top:.75rem">
     <table id="guess-table" aria-label="Guesses">
       <thead>
@@ -236,22 +196,23 @@ footer{text-align:center;font-size:11px;color:var(--text3);padding:2rem 1rem;bor
           <th scope="col">Gender</th>
           <th scope="col">Alignment</th>
           <th scope="col">Species</th>
+          <th scope="col">Power</th>
           <th scope="col">Year</th>
           <th scope="col">Affiliation</th>
           <th scope="col">Base</th>
+          <th scope="col">Media</th>
         </tr>
       </thead>
       <tbody id="guess-body"></tbody>
     </table>
   </div>
-
   <section class="how-section">
     <h3>How to play</h3>
     <div class="how-grid">
       <div class="how-card"><div class="num">01</div><p>Type any Batman universe character to make your first guess.</p></div>
-      <div class="how-card"><div class="num">02</div><p>Each guess reveals colour-coded clues across 6 attributes.</p></div>
+      <div class="how-card"><div class="num">02</div><p>Each guess reveals colour-coded clues across 8 attributes.</p></div>
       <div class="how-card"><div class="num">03</div><p>Green = exact match. Yellow = close or partial. Red = wrong.</p></div>
-      <div class="how-card"><div class="num">04</div><p>After 3 guesses, unlock a hint revealing one hidden attribute.</p></div>
+      <div class="how-card"><div class="num">04</div><p>After 3 guesses, unlock a hint — a clue from the character's DC biography.</p></div>
     </div>
   </section>
 </main>
@@ -262,101 +223,97 @@ footer{text-align:center;font-size:11px;color:var(--text3);padding:2rem 1rem;bor
 </footer>
 
 <script>
+// power: None / Enhanced / Metahuman / Supernatural
+// media: Comics / Animated / Film / Multi
 const CHARS=[
-  {name:"Batman",gender:"Male",alignment:"Hero",species:"Human",year:1939,affiliation:"Justice League",base:"Gotham"},
-  {name:"Joker",gender:"Male",alignment:"Villain",species:"Human",year:1940,affiliation:"None",base:"Gotham"},
-  {name:"Catwoman",gender:"Female",alignment:"Neutral",species:"Human",year:1940,affiliation:"None",base:"Gotham"},
-  {name:"Robin (Dick Grayson)",gender:"Male",alignment:"Hero",species:"Human",year:1940,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Two-Face",gender:"Male",alignment:"Villain",species:"Human",year:1942,affiliation:"None",base:"Gotham"},
-  {name:"Penguin",gender:"Male",alignment:"Villain",species:"Human",year:1941,affiliation:"None",base:"Gotham"},
-  {name:"Riddler",gender:"Male",alignment:"Villain",species:"Human",year:1948,affiliation:"None",base:"Gotham"},
-  {name:"Harley Quinn",gender:"Female",alignment:"Neutral",species:"Human",year:1992,affiliation:"Suicide Squad",base:"Gotham"},
-  {name:"Poison Ivy",gender:"Female",alignment:"Villain",species:"Human/Plant",year:1966,affiliation:"Injustice League",base:"Gotham"},
-  {name:"Bane",gender:"Male",alignment:"Villain",species:"Human",year:1993,affiliation:"None",base:"Santa Prisca"},
-  {name:"Scarecrow",gender:"Male",alignment:"Villain",species:"Human",year:1941,affiliation:"Injustice League",base:"Gotham"},
-  {name:"Mr. Freeze",gender:"Male",alignment:"Villain",species:"Human",year:1959,affiliation:"None",base:"Gotham"},
-  {name:"Ra's al Ghul",gender:"Male",alignment:"Villain",species:"Human",year:1971,affiliation:"League of Shadows",base:"Various"},
-  {name:"Talia al Ghul",gender:"Female",alignment:"Villain",species:"Human",year:1971,affiliation:"League of Shadows",base:"Various"},
-  {name:"Nightwing",gender:"Male",alignment:"Hero",species:"Human",year:1963,affiliation:"Batman Family",base:"Bludhaven"},
-  {name:"Batgirl (Barbara Gordon)",gender:"Female",alignment:"Hero",species:"Human",year:1967,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Oracle",gender:"Female",alignment:"Hero",species:"Human",year:1989,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Red Hood (Jason Todd)",gender:"Male",alignment:"Neutral",species:"Human",year:1983,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Red Robin (Tim Drake)",gender:"Male",alignment:"Hero",species:"Human",year:1989,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Damian Wayne",gender:"Male",alignment:"Hero",species:"Human",year:2006,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Alfred Pennyworth",gender:"Male",alignment:"Hero",species:"Human",year:1943,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Commissioner Gordon",gender:"Male",alignment:"Hero",species:"Human",year:1939,affiliation:"GCPD",base:"Gotham"},
-  {name:"Lucius Fox",gender:"Male",alignment:"Hero",species:"Human",year:1979,affiliation:"Wayne Enterprises",base:"Gotham"},
-  {name:"Hugo Strange",gender:"Male",alignment:"Villain",species:"Human",year:1940,affiliation:"None",base:"Gotham"},
-  {name:"Mad Hatter",gender:"Male",alignment:"Villain",species:"Human",year:1948,affiliation:"None",base:"Gotham"},
-  {name:"Killer Croc",gender:"Male",alignment:"Villain",species:"Mutant",year:1983,affiliation:"None",base:"Gotham"},
-  {name:"Clayface",gender:"Male",alignment:"Villain",species:"Metahuman",year:1940,affiliation:"None",base:"Gotham"},
-  {name:"Black Mask",gender:"Male",alignment:"Villain",species:"Human",year:1985,affiliation:"False Face Society",base:"Gotham"},
-  {name:"Deathstroke",gender:"Male",alignment:"Villain",species:"Human",year:1980,affiliation:"None",base:"Various"},
-  {name:"Deadshot",gender:"Male",alignment:"Villain",species:"Human",year:1950,affiliation:"Suicide Squad",base:"Various"},
-  {name:"Firefly",gender:"Male",alignment:"Villain",species:"Human",year:1952,affiliation:"None",base:"Gotham"},
-  {name:"Azrael",gender:"Male",alignment:"Neutral",species:"Human",year:1992,affiliation:"Order of St. Dumas",base:"Gotham"},
-  {name:"Huntress",gender:"Female",alignment:"Hero",species:"Human",year:1977,affiliation:"Birds of Prey",base:"Gotham"},
-  {name:"Black Canary",gender:"Female",alignment:"Hero",species:"Human",year:1947,affiliation:"Birds of Prey",base:"Various"},
-  {name:"Zatanna",gender:"Female",alignment:"Hero",species:"Human/Mage",year:1964,affiliation:"Justice League",base:"Various"},
-  {name:"Cassandra Cain",gender:"Female",alignment:"Hero",species:"Human",year:1999,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Stephanie Brown",gender:"Female",alignment:"Hero",species:"Human",year:1992,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Man-Bat",gender:"Male",alignment:"Villain",species:"Mutant",year:1970,affiliation:"None",base:"Gotham"},
-  {name:"Ventriloquist",gender:"Male",alignment:"Villain",species:"Human",year:1988,affiliation:"None",base:"Gotham"},
-  {name:"Zsasz",gender:"Male",alignment:"Villain",species:"Human",year:1992,affiliation:"None",base:"Gotham"},
-  {name:"Hush",gender:"Male",alignment:"Villain",species:"Human",year:2003,affiliation:"None",base:"Gotham"},
-  {name:"Talon",gender:"Male",alignment:"Villain",species:"Human",year:2012,affiliation:"Court of Owls",base:"Gotham"},
-  {name:"Killer Moth",gender:"Male",alignment:"Villain",species:"Human",year:1951,affiliation:"None",base:"Gotham"},
-  {name:"Calendar Man",gender:"Male",alignment:"Villain",species:"Human",year:1958,affiliation:"None",base:"Gotham"},
-  {name:"Anarky",gender:"Male",alignment:"Neutral",species:"Human",year:1989,affiliation:"None",base:"Gotham"},
-  {name:"Batwoman (Kate Kane)",gender:"Female",alignment:"Hero",species:"Human",year:2006,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Signal (Duke Thomas)",gender:"Male",alignment:"Hero",species:"Metahuman",year:2015,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Batwing (Luke Fox)",gender:"Male",alignment:"Hero",species:"Human",year:2011,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Spoiler",gender:"Female",alignment:"Hero",species:"Human",year:1992,affiliation:"Batman Family",base:"Gotham"},
-  {name:"Lady Shiva",gender:"Female",alignment:"Villain",species:"Human",year:1975,affiliation:"None",base:"Various"},
-  {name:"Bronze Tiger",gender:"Male",alignment:"Neutral",species:"Human",year:1975,affiliation:"Suicide Squad",base:"Various"},
-  {name:"Renee Montoya",gender:"Female",alignment:"Hero",species:"Human",year:1992,affiliation:"GCPD",base:"Gotham"},
-  {name:"Harvey Bullock",gender:"Male",alignment:"Hero",species:"Human",year:1974,affiliation:"GCPD",base:"Gotham"},
-  {name:"Maxie Zeus",gender:"Male",alignment:"Villain",species:"Human",year:1979,affiliation:"None",base:"Gotham"},
-  {name:"Professor Pyg",gender:"Male",alignment:"Villain",species:"Human",year:2007,affiliation:"None",base:"Gotham"},
-  {name:"Owlman",gender:"Male",alignment:"Villain",species:"Human",year:1964,affiliation:"Crime Syndicate",base:"Earth-3"},
-  {name:"Phantasm",gender:"Female",alignment:"Neutral",species:"Human",year:1993,affiliation:"None",base:"Gotham"},
-  {name:"Lock-Up",gender:"Male",alignment:"Villain",species:"Human",year:1995,affiliation:"None",base:"Gotham"},
-  {name:"KGBeast",gender:"Male",alignment:"Villain",species:"Human",year:1987,affiliation:"None",base:"Various"},
-  {name:"Onomatopoeia",gender:"Male",alignment:"Villain",species:"Human",year:2002,affiliation:"None",base:"Various"},
+  {name:"Batman",gender:"Male",alignment:"Hero",species:"Human",power:"None",year:1939,affiliation:"Justice League",base:"Gotham",media:"Multi",hint:"Billionaire Bruce Wayne witnessed his parents' murder as a child and trained his mind and body to peak perfection to wage a one-man war on crime."},
+  {name:"Joker",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1940,affiliation:"None",base:"Gotham",media:"Multi",hint:"His true identity remains unknown. He fell into a vat of chemicals that bleached his skin white and drove him to madness, making him Batman's ultimate nemesis."},
+  {name:"Catwoman",gender:"Female",alignment:"Neutral",species:"Human",power:"None",year:1940,affiliation:"None",base:"Gotham",media:"Multi",hint:"Selina Kyle grew up in the Gotham slums and became the city's most skilled cat burglar, sharing a complicated romantic history with the Dark Knight."},
+  {name:"Robin (Dick Grayson)",gender:"Male",alignment:"Hero",species:"Human",power:"None",year:1940,affiliation:"Batman Family",base:"Gotham",media:"Multi",hint:"The youngest of the Flying Graysons acrobat family, he watched his parents fall to their deaths and was taken in by Bruce Wayne to become the first Robin."},
+  {name:"Two-Face",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1942,affiliation:"None",base:"Gotham",media:"Multi",hint:"Former Gotham DA Harvey Dent had acid thrown on half his face, splitting his psyche into two personalities — one good, one evil — with all decisions made by a scarred coin flip."},
+  {name:"Penguin",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1941,affiliation:"None",base:"Gotham",media:"Multi",hint:"Oswald Cobblepot runs the Iceberg Lounge as a front for criminal activity. Mocked for his appearance since childhood, he built a criminal empire through cunning and connections."},
+  {name:"Riddler",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1948,affiliation:"None",base:"Gotham",media:"Multi",hint:"Edward Nygma has a compulsive need to leave clues and riddles at crime scenes, convinced his intellect surpasses Batman's — a belief Batman repeatedly disproves."},
+  {name:"Harley Quinn",gender:"Female",alignment:"Neutral",species:"Human",power:"None",year:1992,affiliation:"Suicide Squad",base:"Gotham",media:"Multi",hint:"Dr Harleen Quinzel was a Arkham psychiatrist who became obsessed with the Joker while treating him, eventually becoming his accomplice and lover before striking out on her own."},
+  {name:"Poison Ivy",gender:"Female",alignment:"Villain",species:"Human/Plant",power:"Metahuman",year:1966,affiliation:"Injustice League",base:"Gotham",media:"Multi",hint:"Dr Pamela Isley was a botanist who was injected with plant toxins as part of an experiment, transforming her into a human-plant hybrid with control over all plant life."},
+  {name:"Bane",gender:"Male",alignment:"Villain",species:"Human",power:"Enhanced",year:1993,affiliation:"None",base:"Santa Prisca",media:"Multi",hint:"Born and raised in a brutal Caribbean prison where he served his father's sentence, he enhanced his body with the steroid Venom and broke Batman's back over his knee."},
+  {name:"Scarecrow",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1941,affiliation:"Injustice League",base:"Gotham",media:"Multi",hint:"Professor Jonathan Crane was a psychologist obsessed with fear. Fired from Gotham University, he became a villain using a fear toxin that forces victims to experience their worst nightmares."},
+  {name:"Mr. Freeze",gender:"Male",alignment:"Villain",species:"Human",power:"Enhanced",year:1959,affiliation:"None",base:"Gotham",media:"Multi",hint:"Dr Victor Fries was a cryogenics scientist whose body was altered in a lab accident, forcing him to live in a sub-zero suit. He commits crimes to fund a cure for his cryogenically frozen wife."},
+  {name:"Ra's al Ghul",gender:"Male",alignment:"Villain",species:"Human",power:"Enhanced",year:1971,affiliation:"League of Shadows",base:"Various",media:"Multi",hint:"An eco-terrorist centuries old, he has cheated death repeatedly using a mystical pit called the Lazarus Pit. He sees Batman as the one worthy successor to his global organisation."},
+  {name:"Talia al Ghul",gender:"Female",alignment:"Villain",species:"Human",power:"Enhanced",year:1971,affiliation:"League of Shadows",base:"Various",media:"Multi",hint:"Daughter of Ra's al Ghul and mother of Damian Wayne, she was raised to be the perfect assassin and heir to the League of Shadows, torn between her father's mission and her love for Batman."},
+  {name:"Nightwing",gender:"Male",alignment:"Hero",species:"Human",power:"None",year:1963,affiliation:"Batman Family",base:"Bludhaven",media:"Multi",hint:"Dick Grayson outgrew his role as Robin and forged his own identity, relocating to the neighbouring city of Blüdhaven and becoming its protector with a more optimistic style than his mentor."},
+  {name:"Batgirl (Barbara Gordon)",gender:"Female",alignment:"Hero",species:"Human",power:"None",year:1967,affiliation:"Batman Family",base:"Gotham",media:"Multi",hint:"Commissioner Gordon's daughter, she created her own Batgirl costume against her father's wishes and proved herself one of the finest detectives in Gotham, before being shot and paralysed by the Joker."},
+  {name:"Oracle",gender:"Female",alignment:"Hero",species:"Human",power:"None",year:1989,affiliation:"Batman Family",base:"Gotham",media:"Comics",hint:"After being paralysed by the Joker's bullet, Barbara Gordon reinvented herself as Oracle — the information broker and hacker who became the most valuable intelligence asset in the DC universe."},
+  {name:"Red Hood (Jason Todd)",gender:"Male",alignment:"Neutral",species:"Human",power:"None",year:1983,affiliation:"Batman Family",base:"Gotham",media:"Multi",hint:"The second Robin, he was beaten with a crowbar and killed by the Joker. Resurrected by a Lazarus Pit, he returned as the violent antihero Red Hood, using lethal methods Batman refuses."},
+  {name:"Red Robin (Tim Drake)",gender:"Male",alignment:"Hero",species:"Human",power:"None",year:1989,affiliation:"Batman Family",base:"Gotham",media:"Comics",hint:"He deduced Batman's secret identity as a child and insisted on becoming Robin. Considered the most analytical of all the Robins, he later took the Red Robin identity to operate independently."},
+  {name:"Damian Wayne",gender:"Male",alignment:"Hero",species:"Human",power:"None",year:2006,affiliation:"Batman Family",base:"Gotham",media:"Multi",hint:"The biological son of Batman and Talia al Ghul, he was raised by the League of Shadows as an assassin before Bruce Wayne claimed him. Arrogant and deadly, he became the fifth Robin."},
+  {name:"Alfred Pennyworth",gender:"Male",alignment:"Hero",species:"Human",power:"None",year:1943,affiliation:"Batman Family",base:"Gotham",media:"Multi",hint:"Former MI6 agent and SAS soldier turned butler, he has served the Wayne family since Bruce was a child and is the emotional backbone of Batman's crusade, often the only voice of reason."},
+  {name:"Commissioner Gordon",gender:"Male",alignment:"Hero",species:"Human",power:"None",year:1939,affiliation:"GCPD",base:"Gotham",media:"Multi",hint:"The first character ever to appear alongside Batman, he is the one honest cop at the top of a corrupt police force, signalling the Dark Knight with the Bat-Signal when Gotham is in danger."},
+  {name:"Lucius Fox",gender:"Male",alignment:"Hero",species:"Human",power:"None",year:1979,affiliation:"Wayne Enterprises",base:"Gotham",media:"Multi",hint:"The brilliant CEO of Wayne Enterprises who quietly manages Bruce Wayne's business empire and provides Batman with his advanced technology, fully aware of his employer's secret identity."},
+  {name:"Hugo Strange",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1940,affiliation:"None",base:"Gotham",media:"Multi",hint:"One of Batman's oldest foes, this brilliant but unhinged psychiatrist was the first villain to deduce Batman's secret identity and became obsessed with possessing it for himself."},
+  {name:"Mad Hatter",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1948,affiliation:"None",base:"Gotham",media:"Multi",hint:"Jervis Tetch is a deranged neuroscientist obsessed with Alice in Wonderland who uses mind-control technology hidden in his hats to force victims to act out scenes from the story."},
+  {name:"Killer Croc",gender:"Male",alignment:"Villain",species:"Mutant",power:"Enhanced",year:1983,affiliation:"None",base:"Gotham",media:"Multi",hint:"Waylon Jones was born with a rare condition that gives him reptilian skin, superhuman strength and regeneration. Raised in an abusive environment, he became a feared cannibal predator in Gotham's sewers."},
+  {name:"Clayface",gender:"Male",alignment:"Villain",species:"Metahuman",power:"Metahuman",year:1940,affiliation:"None",base:"Gotham",media:"Multi",hint:"Actor Basil Karlo was driven mad when his classic horror film was remade without him. After gaining shape-shifting clay powers, he can perfectly mimic any person or object."},
+  {name:"Black Mask",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1985,affiliation:"False Face Society",base:"Gotham",media:"Multi",hint:"Roman Sionis was a failed businessman who carved a mask from his parents' coffin and burned his face when he couldn't remove it, becoming Gotham's most brutal crime lord."},
+  {name:"Deathstroke",gender:"Male",alignment:"Villain",species:"Human",power:"Enhanced",year:1980,affiliation:"None",base:"Various",media:"Multi",hint:"Slade Wilson is a super-soldier who can use 90% of his brain capacity, making him the world's greatest mercenary. He has a long history with the Batman Family as both enemy and uneasy ally."},
+  {name:"Deadshot",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1950,affiliation:"Suicide Squad",base:"Various",media:"Multi",hint:"Floyd Lawton is the world's greatest marksman, known for never missing a shot. He has a death wish and works as an assassin-for-hire, often reluctantly serving on Amanda Waller's Suicide Squad."},
+  {name:"Firefly",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1952,affiliation:"None",base:"Gotham",media:"Multi",hint:"Garfield Lynns was a pyrotechnics expert with an obsessive fixation on fire. Using a high-tech fireproof suit and flamethrower, he commits arson for hire across Gotham."},
+  {name:"Azrael",gender:"Male",alignment:"Neutral",species:"Human",power:"Enhanced",year:1992,affiliation:"Order of St. Dumas",base:"Gotham",media:"Comics",hint:"Jean-Paul Valley was unknowingly programmed from birth by the religious cult the Order of St. Dumas to be an assassin. He briefly replaced a broken Batman and proved too brutal for the cowl."},
+  {name:"Huntress",gender:"Female",alignment:"Hero",species:"Human",power:"None",year:1977,affiliation:"Birds of Prey",base:"Gotham",media:"Multi",hint:"Helena Bertinelli is the sole survivor of a Gotham Mafia family massacre. She became a vigilante to destroy organised crime, often clashing with Batman over her willingness to use lethal force."},
+  {name:"Black Canary",gender:"Female",alignment:"Hero",species:"Human",power:"Metahuman",year:1947,affiliation:"Birds of Prey",base:"Various",media:"Multi",hint:"Dinah Lance inherited the superhero legacy from her mother and possesses a metahuman sonic scream called the Canary Cry. She is one of the world's finest martial artists and co-leads the Birds of Prey."},
+  {name:"Zatanna",gender:"Female",alignment:"Hero",species:"Human/Mage",power:"Supernatural",year:1964,affiliation:"Justice League",base:"Various",media:"Multi",hint:"A stage magician and genuine sorceress, she casts spells by speaking backwards. Daughter of the legendary Zatara, she is one of the most powerful magic users in the DC universe."},
+  {name:"Cassandra Cain",gender:"Female",alignment:"Hero",species:"Human",power:"None",year:1999,affiliation:"Batman Family",base:"Gotham",media:"Comics",hint:"Raised by assassin David Cain to be the perfect killer, she was taught no language except body language, making her the world's greatest martial artist. She became Batgirl and later Black Bat."},
+  {name:"Stephanie Brown",gender:"Female",alignment:"Hero",species:"Human",power:"None",year:1992,affiliation:"Batman Family",base:"Gotham",media:"Comics",hint:"The daughter of the villain Cluemaster, she became the vigilante Spoiler to foil her father's crimes. She later became Robin and then Batgirl, persistently earning her place in the Batman Family."},
+  {name:"Man-Bat",gender:"Male",alignment:"Villain",species:"Mutant",power:"Enhanced",year:1970,affiliation:"None",base:"Gotham",media:"Multi",hint:"Dr Kirk Langstrom created a serum derived from bat DNA to cure his deafness. The formula transformed him into a monstrous bat creature, and he loses his human consciousness each time he transforms."},
+  {name:"Ventriloquist",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1988,affiliation:"None",base:"Gotham",media:"Multi",hint:"Arnold Wesker was a meek, mild-mannered man whose violent alter ego was expressed entirely through a tommy-gun-wielding gangster dummy named Scarface, which he believed to be alive."},
+  {name:"Zsasz",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1992,affiliation:"None",base:"Gotham",media:"Multi",hint:"Victor Zsasz is a serial killer who carves a tally mark into his own skin for every person he murders. A former wealthy heir, he lost his entire fortune gambling and believes life is meaningless."},
+  {name:"Hush",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:2003,affiliation:"None",base:"Gotham",media:"Comics",hint:"Thomas Elliot was Bruce Wayne's childhood best friend who attempted to murder his own parents for their inheritance. A brilliant surgeon, he knows Batman's identity and targets everything Bruce loves."},
+  {name:"Talon",gender:"Male",alignment:"Villain",species:"Human",power:"Enhanced",year:2012,affiliation:"Court of Owls",base:"Gotham",media:"Comics",hint:"The Court of Owls' undead assassins, reanimated by electrum in their bones. They have stalked Gotham's most powerful families for centuries, serving the secret society that truly rules the city."},
+  {name:"Killer Moth",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1951,affiliation:"None",base:"Gotham",media:"Comics",hint:"Drury Walker styled himself as the criminal answer to Batman — a benefactor to Gotham's criminal underworld — but is generally considered one of Batman's most inept and ridiculous foes."},
+  {name:"Calendar Man",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1958,affiliation:"None",base:"Gotham",media:"Multi",hint:"Julian Day commits elaborate crimes themed around holidays and calendar dates, obsessing over the cycle of time. His unsettling calm and insight into Batman's mind inspired the Silence of the Lambs dynamic in The Long Halloween."},
+  {name:"Anarky",gender:"Male",alignment:"Neutral",species:"Human",power:"None",year:1989,affiliation:"None",base:"Gotham",media:"Multi",hint:"Lonnie Machin was a child prodigy who became a political anarchist, believing society's systems are the root of all crime. He clashes equally with Batman and with Gotham's villains."},
+  {name:"Batwoman (Kate Kane)",gender:"Female",alignment:"Hero",species:"Human",power:"None",year:2006,affiliation:"Batman Family",base:"Gotham",media:"Multi",hint:"A highly decorated West Point cadet discharged under Don't Ask Don't Tell, Kate Kane channelled her military discipline into becoming Batwoman — one of the most skilled fighters in the Bat Family."},
+  {name:"Signal (Duke Thomas)",gender:"Male",alignment:"Hero",species:"Metahuman",power:"Metahuman",year:2015,affiliation:"Batman Family",base:"Gotham",media:"Comics",hint:"Duke Thomas is the first member of the Batman Family to operate in daylight, using his metahuman ability to manipulate and perceive light and photons to protect Gotham during the day."},
+  {name:"Batwing (Luke Fox)",gender:"Male",alignment:"Hero",species:"Human",power:"None",year:2011,affiliation:"Batman Family",base:"Gotham",media:"Comics",hint:"Luke Fox, son of Lucius Fox, uses a sophisticated armoured Batsuit of his own design to operate as Batwing. A former MMA champion, he combines athletic skill with cutting-edge Wayne Tech."},
+  {name:"Spoiler",gender:"Female",alignment:"Hero",species:"Human",power:"None",year:1992,affiliation:"Batman Family",base:"Gotham",media:"Comics",hint:"Stephanie Brown first appeared as the Spoiler, leaving clues to foil her father Cluemaster's plans. Persistent and determined despite being repeatedly sidelined, she became Robin and later Batgirl."},
+  {name:"Lady Shiva",gender:"Female",alignment:"Villain",species:"Human",power:"None",year:1975,affiliation:"None",base:"Various",media:"Multi",hint:"Sandra Wu-San is considered by many — including Batman and Ra's al Ghul — to be the single greatest martial artist alive. She kills for sport and has served as both trainer and deadly enemy to the Bat Family."},
+  {name:"Bronze Tiger",gender:"Male",alignment:"Neutral",species:"Human",power:"None",year:1975,affiliation:"Suicide Squad",base:"Various",media:"Multi",hint:"Ben Turner is one of the world's greatest martial artists, trained by the League of Assassins and brainwashed into a killing machine. He later broke free and served on the Suicide Squad as a reluctant hero."},
+  {name:"Renee Montoya",gender:"Female",alignment:"Hero",species:"Human",power:"None",year:1992,affiliation:"GCPD",base:"Gotham",media:"Multi",hint:"A dedicated GCPD detective first created for Batman: The Animated Series, she was later outed and forced from the force, eventually taking up the mantle of the faceless vigilante known as The Question."},
+  {name:"Harvey Bullock",gender:"Male",alignment:"Hero",species:"Human",power:"None",year:1974,affiliation:"GCPD",base:"Gotham",media:"Multi",hint:"The gruff, dishevelled GCPD detective is Gordon's most loyal partner. Though he initially resented Batman, he became one of the few cops who genuinely respects and works alongside him."},
+  {name:"Maxie Zeus",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1979,affiliation:"None",base:"Gotham",media:"Animated",hint:"Maximilian Zeus is a former history teacher who suffered a mental breakdown and became convinced he is the reincarnation of the Greek god Zeus, committing crimes with an Ancient Greek mythology theme."},
+  {name:"Professor Pyg",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:2007,affiliation:"None",base:"Gotham",media:"Multi",hint:"One of Batman's most disturbing modern villains, Lazlo Valentin is a deranged surgeon who kidnaps victims and surgically transforms them into blank-faced dolls he calls Dollotrons, serving his twisted vision of perfection."},
+  {name:"Owlman",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1964,affiliation:"Crime Syndicate",base:"Earth-3",media:"Multi",hint:"The evil mirror version of Batman from Earth-3, Thomas Wayne Jr. watched his brother Bruce and mother die and became a nihilistic supervillain. He is considered even more dangerous than Batman because he has no moral code."},
+  {name:"Phantasm",gender:"Female",alignment:"Neutral",species:"Human",power:"None",year:1993,affiliation:"None",base:"Gotham",media:"Animated",hint:"Andrea Beaumont was Bruce Wayne's first love, who disappeared before he became Batman. She returned as the Phantasm, a masked vigilante killing off mob bosses who murdered her father, in Batman: Mask of the Phantasm."},
+  {name:"Lock-Up",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:1995,affiliation:"None",base:"Gotham",media:"Animated",hint:"Lyle Bolton was a fanatical security guard fired from Arkham Asylum for prisoner abuse. He became Lock-Up, a vigilante who kidnaps and imprisons those he blames for society's problems in his own private prison."},
+  {name:"KGBeast",gender:"Male",alignment:"Villain",species:"Human",power:"Enhanced",year:1987,affiliation:"None",base:"Various",media:"Multi",hint:"Anatoli Knyazev is a Soviet-trained assassin so dangerous that Batman was forced to trap him in a sewer and leave him to starve. He cut off his own hand to escape a trap and replaced it with a weapon."},
+  {name:"Onomatopoeia",gender:"Male",alignment:"Villain",species:"Human",power:"None",year:2002,affiliation:"None",base:"Various",media:"Comics",hint:"A serial killer who exclusively targets non-powered vigilantes, he never speaks except to mimic sounds around him — a footstep, a gunshot, a heartbeat. His true identity remains completely unknown."},
 ];
 
 const MAX_GUESSES=8;
-const COLS=["gender","alignment","species","year","affiliation","base"];
+const COLS=["gender","alignment","species","power","year","affiliation","base","media"];
 const EMOJI={g:"🟩",y:"🟨",r:"🟥"};
-const HINT_ATTRS=["gender","alignment","species","affiliation","base"];
 const EPOCH=new Date('2024-01-01T00:00:00Z').getTime();
 
-let answer,guessed,gameOver,guessedNames,mode,emojiRows,hintUsed;
-let archiveDate=null; // null = today/free, else Date object for archive play
+let answer,guessed,gameOver,guessedNames,mode,emojiRows,hintUsed,archiveDate=null;
 
-// ── STORAGE HELPERS ──
 function lsGet(k){try{return localStorage.getItem(k);}catch(e){return null;}}
 function lsSet(k,v){try{localStorage.setItem(k,v);}catch(e){}}
 function getStreak(){return parseInt(lsGet('bmdle_streak')||'0');}
 function setStreak(n){lsSet('bmdle_streak',String(n));document.getElementById('streak-display').textContent=n;}
-function getBestStreak(){return parseInt(lsGet('bmdle_best_streak')||'0');}
-function setBestStreak(n){lsSet('bmdle_best_streak',String(n));}
-function getStats(){try{return JSON.parse(lsGet('bmdle_stats')||'{"played":0,"won":0,"dist":[0,0,0,0,0,0,0,0]}')}catch(e){return{played:0,won:0,dist:[0,0,0,0,0,0,0,0]};}}
+function getBestStreak(){return parseInt(lsGet('bmdle_best')||'0');}
+function setBestStreak(n){lsSet('bmdle_best',String(n));}
+function getStats(){try{return JSON.parse(lsGet('bmdle_stats')||'{"played":0,"won":0,"dist":[0,0,0,0,0,0,0,0]}');}catch(e){return{played:0,won:0,dist:[0,0,0,0,0,0,0,0]};}}
 function setStats(s){lsSet('bmdle_stats',JSON.stringify(s));}
-function dayKey(d){return`bmdle_daily_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;}
+function dayKey(d){return`bmdle_d_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;}
 function todayKey(){return dayKey(new Date());}
 function getDailyIndex(d){return Math.floor((d.getTime()-EPOCH)/86400000)%CHARS.length;}
 function formatDate(d){return(d||new Date()).toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'long',year:'numeric'});}
 function formatDateShort(d){return d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}
 
-// ── MODE / INIT ──
 function setMode(m){
-  if(archiveDate){exitArchive();}
+  if(archiveDate)exitArchive();
   mode=m;
   document.getElementById('btn-daily').classList.toggle('active',m==='daily');
   document.getElementById('btn-free').classList.toggle('active',m==='free');
-  document.getElementById('btn-daily').setAttribute('aria-selected',String(m==='daily'));
-  document.getElementById('btn-free').setAttribute('aria-selected',String(m==='free'));
   document.getElementById('mode-label').textContent=m==='daily'?"TODAY'S CHARACTER":"FREE PLAY";
   document.getElementById('date-label').textContent=m==='daily'?formatDate():'Random character — unlimited games';
   document.getElementById('archive-banner-area').innerHTML='';
@@ -364,20 +321,19 @@ function setMode(m){
 }
 
 function initGame(){
-  const today=new Date();
   if(archiveDate){
     answer=CHARS[getDailyIndex(archiveDate)];
     const saved=JSON.parse(lsGet(dayKey(archiveDate))||'null');
     resetUI();
-    if(saved){restoreGuesses(saved);if(saved.gameOver){finishGame(saved.won,true);}}
+    if(saved){restoreGuesses(saved);if(saved.gameOver)finishGame(saved.won,true);}
     else{renderPips();updateGuessesLeft();}
     return;
   }
   if(mode==='daily'){
-    answer=CHARS[getDailyIndex(today)];
+    answer=CHARS[getDailyIndex(new Date())];
     const saved=JSON.parse(lsGet(todayKey())||'null');
     resetUI();
-    if(saved){restoreGuesses(saved);if(saved.gameOver){finishGame(saved.won,true);}}
+    if(saved){restoreGuesses(saved);if(saved.gameOver)finishGame(saved.won,true);}
     else{renderPips();updateGuessesLeft();}
   } else {
     answer=CHARS[Math.floor(Math.random()*CHARS.length)];
@@ -399,24 +355,19 @@ function resetUI(){
 
 function restoreGuesses(saved){
   guessedNames=new Set(saved.guessedNames||[]);
-  emojiRows=saved.emojiRows||[];
-  hintUsed=saved.hintUsed||false;
-  (saved.guessedNames||[]).forEach(name=>{
-    const c=CHARS.find(x=>x.name===name);
-    if(c){guessed.push(c);appendRow(c,false);}
-  });
+  emojiRows=saved.emojiRows||[];hintUsed=saved.hintUsed||false;
+  (saved.guessedNames||[]).forEach(name=>{const c=CHARS.find(x=>x.name===name);if(c){guessed.push(c);appendRow(c,false);}});
   updateHintBtn();
   if(!saved.gameOver){renderPips();updateGuessesLeft();}
 }
 
 function saveState(){
-  const isArchive=!!archiveDate;
-  const key=isArchive?dayKey(archiveDate):(mode==='daily'?todayKey():null);
-  if(!key) return;
+  const key=archiveDate?dayKey(archiveDate):(mode==='daily'?todayKey():null);
+  if(!key)return;
   lsSet(key,JSON.stringify({guessedNames:[...guessedNames],emojiRows,gameOver,hintUsed,won:gameOver&&guessed.length>0&&guessed[guessed.length-1].name===answer.name}));
 }
 
-// ── ARCHIVE ──
+// ARCHIVE
 function openArchive(){
   const overlay=document.createElement('div');
   overlay.className='modal-overlay';overlay.id='archive-overlay';
@@ -428,25 +379,22 @@ function openArchive(){
 function buildArchiveHTML(){
   const today=new Date();
   const startDate=new Date('2024-01-01T00:00:00Z');
-  // build last 3 months of calendar
   let html=`<div class="modal"><div class="modal-title">📅 ARCHIVE<button class="modal-close" onclick="document.getElementById('archive-overlay').remove()">✕</button></div>`;
   for(let m=0;m<3;m++){
     const d=new Date(today.getFullYear(),today.getMonth()-m,1);
     const monthName=d.toLocaleDateString('en-GB',{month:'long',year:'numeric'});
     html+=`<div class="archive-month"><div class="archive-month-title">${monthName.toUpperCase()}</div><div class="archive-grid">`;
-    const firstDay=(d.getDay()+6)%7; // Mon=0
-    for(let i=0;i<firstDay;i++) html+=`<div class="archive-day empty"></div>`;
+    const firstDay=(d.getDay()+6)%7;
+    for(let i=0;i<firstDay;i++)html+=`<div class="archive-day empty"></div>`;
     const daysInMonth=new Date(d.getFullYear(),d.getMonth()+1,0).getDate();
     for(let day=1;day<=daysInMonth;day++){
       const date=new Date(d.getFullYear(),d.getMonth(),day);
-      const isFuture=date>today;
       const isToday=date.toDateString()===today.toDateString();
       const isPast=date>=startDate&&date<=today;
       if(!isPast&&!isToday){html+=`<div class="archive-day future"><span class="aday-num">${day}</span></div>`;continue;}
       const saved=JSON.parse(lsGet(dayKey(date))||'null');
-      let cls='archive-day';
-      let status='';
-      if(isToday) cls+=' today';
+      let cls='archive-day';let status='';
+      if(isToday)cls+=' today';
       if(saved?.gameOver){if(saved.won){cls+=' won';status='✓';}else{cls+=' lost';status='✗';}}
       const ds=date.toISOString().split('T')[0];
       html+=`<div class="${cls}" onclick="playArchiveDate('${ds}')"><span class="aday-num">${day}</span><span class="aday-status">${status}</span></div>`;
@@ -462,29 +410,21 @@ function playArchiveDate(ds){
   const date=new Date(ds+'T00:00:00');
   const isToday=date.toDateString()===new Date().toDateString();
   if(isToday&&mode==='daily'){archiveDate=null;initGame();return;}
-  archiveDate=date;
-  mode='daily';
+  archiveDate=date;mode='daily';
   document.getElementById('btn-daily').classList.add('active');
   document.getElementById('btn-free').classList.remove('active');
   document.getElementById('mode-label').textContent='ARCHIVE';
   document.getElementById('date-label').textContent=formatDateShort(date);
-  const area=document.getElementById('archive-banner-area');
-  area.innerHTML=`<div class="archive-banner"><span>🗓 Playing archive: ${formatDateShort(date)}</span><button class="archive-back" onclick="exitArchive()">← Back to today</button></div>`;
+  document.getElementById('archive-banner-area').innerHTML=`<div class="archive-banner"><span>🗓 Playing archive: ${formatDateShort(date)}</span><button class="archive-back" onclick="exitArchive()">← Back to today</button></div>`;
   initGame();
 }
 
-function exitArchive(){
-  archiveDate=null;
-  document.getElementById('archive-banner-area').innerHTML='';
-  setMode('daily');
-}
+function exitArchive(){archiveDate=null;document.getElementById('archive-banner-area').innerHTML='';setMode('daily');}
 
-// ── STATS MODAL ──
+// STATS
 function openStats(){
   const s=getStats();
   const winPct=s.played>0?Math.round((s.won/s.played)*100):0;
-  const streak=getStreak();
-  const best=getBestStreak();
   const maxDist=Math.max(...s.dist,1);
   let distHTML='';
   s.dist.forEach((v,i)=>{
@@ -494,50 +434,32 @@ function openStats(){
   });
   const overlay=document.createElement('div');
   overlay.className='modal-overlay';
-  overlay.innerHTML=`
-    <div class="modal">
-      <div class="modal-title">📊 STATISTICS<button class="modal-close" onclick="this.closest('.modal-overlay').remove()">✕</button></div>
-      <div class="stats-grid">
-        <div class="stat-box"><div class="stat-num">${s.played}</div><div class="stat-label">Played</div></div>
-        <div class="stat-box"><div class="stat-num">${winPct}%</div><div class="stat-label">Win %</div></div>
-        <div class="stat-box"><div class="stat-num">${streak}</div><div class="stat-label">Streak</div></div>
-        <div class="stat-box"><div class="stat-num">${best}</div><div class="stat-label">Best</div></div>
-      </div>
-      <div class="dist-title">Guess distribution</div>
-      ${distHTML}
-    </div>`;
+  overlay.innerHTML=`<div class="modal"><div class="modal-title">📊 STATISTICS<button class="modal-close" onclick="this.closest('.modal-overlay').remove()">✕</button></div><div class="stats-grid"><div class="stat-box"><div class="stat-num">${s.played}</div><div class="stat-label">Played</div></div><div class="stat-box"><div class="stat-num">${winPct}%</div><div class="stat-label">Win %</div></div><div class="stat-box"><div class="stat-num">${getStreak()}</div><div class="stat-label">Streak</div></div><div class="stat-box"><div class="stat-num">${getBestStreak()}</div><div class="stat-label">Best</div></div></div><div class="dist-title">Guess distribution</div>${distHTML}</div>`;
   document.body.appendChild(overlay);
   overlay.addEventListener('click',e=>{if(e.target===overlay)overlay.remove();});
 }
 
-// ── HINT ──
+// HINT
 function updateHintBtn(){
   const btn=document.getElementById('hint-btn');
   const lk=document.getElementById('hint-locked');
-  const canHint=guessed.length>=3&&!gameOver;
-  btn.disabled=!canHint||hintUsed;
-  if(hintUsed){lk.textContent='Hint used';}
-  else if(guessed.length<3){lk.textContent=`Unlocks after 3 guesses (${3-guessed.length} more)`;}
-  else{lk.textContent='';}
+  btn.disabled=guessed.length<3||gameOver||hintUsed;
+  if(hintUsed)lk.textContent='Hint used';
+  else if(guessed.length<3)lk.textContent=`Unlocks after 3 guesses (${3-guessed.length} more)`;
+  else lk.textContent='';
 }
 
 function showHint(){
-  if(hintUsed||guessed.length<3||gameOver) return;
+  if(hintUsed||guessed.length<3||gameOver)return;
   hintUsed=true;updateHintBtn();saveState();
-  const revealAttr=HINT_ATTRS[Math.floor(Math.random()*HINT_ATTRS.length)];
   const overlay=document.createElement('div');
   overlay.className='modal-overlay';
-  overlay.innerHTML=`
-    <div class="hint-popup">
-      <h3>🦇 HINT</h3>
-      <div class="hint-attr" style="font-size:15px;margin:1rem 0">Revealed attribute:<br><span style="font-size:18px">${revealAttr}: ${answer[revealAttr]}</span></div>
-      <button class="hint-close" onclick="this.closest('.modal-overlay').remove()">Got it</button>
-    </div>`;
+  overlay.innerHTML=`<div class="hint-popup"><h3>🦇 HINT</h3><div class="hint-bio">"${answer.hint}"</div><button class="hint-close" onclick="this.closest('.modal-overlay').remove()">Got it</button></div>`;
   document.body.appendChild(overlay);
   overlay.addEventListener('click',e=>{if(e.target===overlay)overlay.remove();});
 }
 
-// ── SCORING ──
+// SCORING
 function scoreAttr(attr,g){
   const a=answer[attr],gv=g[attr];
   if(attr==='year'){
@@ -547,58 +469,44 @@ function scoreAttr(attr,g){
   }
   if(a===gv)return{cls:'g',label:gv};
   if(attr==='species'){const ap=a.split('/'),gp=gv.split('/');if(ap.some(x=>gp.includes(x)))return{cls:'y',label:gv};}
+  if(attr==='media'){
+    // yellow if one is Multi and the other contains a matching medium
+    if(a==='Multi'||gv==='Multi')return{cls:'y',label:gv};
+  }
   return{cls:'r',label:gv};
 }
 
-// ── TILE FLIP ──
+// TILE FLIP
 function appendRow(char,animate){
   const emojiRow=[];
   const scores=COLS.map(attr=>scoreAttr(attr,char));
   scores.forEach(s=>emojiRow.push(EMOJI[s.cls]));
-  if(animate) emojiRows.unshift(emojiRow);
-
+  if(animate)emojiRows.unshift(emojiRow);
   const tbody=document.getElementById('guess-body');
   const tr=document.createElement('tr');
-  if(animate) tr.classList.add('row-entering');
-
-  const tdName=document.createElement('td');
-  tdName.className='row-label';tdName.textContent=char.name;
-  tr.appendChild(tdName);
-
+  if(animate)tr.classList.add('row-entering');
+  const tdName=document.createElement('td');tdName.className='row-label';tdName.textContent=char.name;tr.appendChild(tdName);
   COLS.forEach((attr,i)=>{
     const td=document.createElement('td');td.className='cell';
     const wrap=document.createElement('div');wrap.className='tile-wrap';
-    const tile=document.createElement('div');
-    tile.className='tile pending';
-    tile.textContent=scores[i].label;
+    const tile=document.createElement('div');tile.className='tile pending';tile.textContent=scores[i].label;
     wrap.appendChild(tile);td.appendChild(wrap);tr.appendChild(td);
-
     if(animate){
-      const delay=i*80;
+      const delay=i*70;
       setTimeout(()=>{
         tile.classList.add('flipping');
-        setTimeout(()=>{
-          tile.classList.remove('pending','flipping');
-          tile.classList.add(scores[i].cls);
-        },250+delay);
+        setTimeout(()=>{tile.classList.remove('pending','flipping');tile.classList.add(scores[i].cls);},250);
       },delay);
     } else {
-      tile.classList.remove('pending');
-      tile.classList.add(scores[i].cls);
+      tile.classList.remove('pending');tile.classList.add(scores[i].cls);
     }
   });
-
   tbody.insertBefore(tr,tbody.firstChild);
 }
 
-// ── PIPS / GUESSES ──
 function renderPips(){
   const el=document.getElementById('pips');el.innerHTML='';
-  for(let i=0;i<MAX_GUESSES;i++){
-    const pip=document.createElement('div');
-    pip.className='pip'+(i<guessed.length?' used':'');
-    el.appendChild(pip);
-  }
+  for(let i=0;i<MAX_GUESSES;i++){const pip=document.createElement('div');pip.className='pip'+(i<guessed.length?' used':'');el.appendChild(pip);}
 }
 function updateGuessesLeft(){
   const left=MAX_GUESSES-guessed.length;
@@ -606,23 +514,20 @@ function updateGuessesLeft(){
   renderPips();
 }
 
-// ── END GAME ──
+const FLIP_DONE=COLS.length*70+500;
+
 function finishGame(won,restored){
   gameOver=true;
   document.getElementById('search').disabled=true;
   document.getElementById('guesses-left').textContent='';
   const msg=document.getElementById('msg');
   if(won){
-    if(restored){msg.textContent=archiveDate?'Already played this one!':'You already got this one! Come back tomorrow.';}
-    else{msg.textContent=guessed.length===1?'First try! Incredible!':guessed.length<=3?`Got it in ${guessed.length}! Impressive.`:`Got it in ${guessed.length}!`;}
+    msg.textContent=restored?(archiveDate?'Already played this one!':'You already got this one! Come back tomorrow.'):guessed.length===1?'First try! Incredible!':guessed.length<=3?`Got it in ${guessed.length}! Impressive.`:`Got it in ${guessed.length}!`;
     msg.className='win';
-  } else {
-    msg.textContent='Game over!';msg.className='lose';
-  }
-  // reveal card
+  } else {msg.textContent='Game over!';msg.className='lose';}
   const area=document.getElementById('reveal-area');area.innerHTML='';
   const card=document.createElement('div');card.className='reveal-card';
-  card.innerHTML=`<div class="reveal-info"><h4>${answer.name}</h4><p>${won?(restored?'Correct answer':`Correct! That's ${answer.name}.`):`The answer was ${answer.name}.`}</p><p style="margin-top:.3rem;color:var(--text3);font-size:11px">${answer.year} · ${answer.alignment} · ${answer.affiliation}</p></div>`;
+  card.innerHTML=`<h4>${answer.name}</h4><p>${won?(restored?'Correct answer':`Correct!`):`The answer was ${answer.name}.`}</p><p style="margin-top:.3rem;color:var(--text3);font-size:11px">${answer.year} · ${answer.alignment} · ${answer.power} · ${answer.media}</p><p style="margin-top:.5rem;font-size:12px;color:var(--text2);font-style:italic">${answer.hint}</p>`;
   area.appendChild(card);
   showEndActions(won);
 }
@@ -639,32 +544,19 @@ function buildShareText(won){
 
 function showEndActions(won){
   const row=document.getElementById('action-row');row.innerHTML='';
-  if(mode==='free'&&!archiveDate){
-    const nb=document.createElement('button');nb.className='btn btn-new';nb.textContent='New game';nb.onclick=()=>initGame();row.appendChild(nb);
-  }
+  if(mode==='free'&&!archiveDate){const nb=document.createElement('button');nb.className='btn btn-new';nb.textContent='New game';nb.onclick=()=>initGame();row.appendChild(nb);}
   const sb=document.createElement('button');sb.className='btn btn-share';sb.textContent='Share result';
   sb.onclick=()=>{
-    const txt=buildShareText(won);
-    const toast=document.getElementById('copied-toast');
-    if(navigator.clipboard&&window.isSecureContext){
-      navigator.clipboard.writeText(txt).then(()=>{toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2500);});
-    } else {
-      const ta=document.createElement('textarea');ta.value=txt;ta.style.cssText='position:fixed;opacity:0';
-      document.body.appendChild(ta);ta.select();
-      try{document.execCommand('copy');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2500);}catch(e){prompt('Copy this:',txt);}
-      document.body.removeChild(ta);
-    }
+    const txt=buildShareText(won);const toast=document.getElementById('copied-toast');
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).then(()=>{toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2500);});}
+    else{const ta=document.createElement('textarea');ta.value=txt;ta.style.cssText='position:fixed;opacity:0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2500);}catch(e){prompt('Copy this:',txt);}document.body.removeChild(ta);}
   };
   row.appendChild(sb);
-  const stb=document.createElement('button');stb.className='btn';stb.textContent='Stats';stb.onclick=openStats;
-  row.appendChild(stb);
+  const stb=document.createElement('button');stb.className='btn';stb.textContent='Stats';stb.onclick=openStats;row.appendChild(stb);
 }
 
-// ── SUBMIT GUESS ──
-const TILE_FLIP_DURATION=COLS.length*80+500;
-
 function submitGuess(char){
-  if(gameOver) return;
+  if(gameOver)return;
   if(guessedNames.has(char.name)){
     const msg=document.getElementById('msg');msg.textContent='Already guessed!';msg.className='';
     setTimeout(()=>{if(!gameOver){msg.textContent='';msg.className='';}},1400);
@@ -674,35 +566,23 @@ function submitGuess(char){
   appendRow(char,true);
   document.getElementById('search').value='';document.getElementById('dropdown').style.display='none';
   updateHintBtn();
-
   const isWin=char.name===answer.name;
   const isLose=!isWin&&guessed.length>=MAX_GUESSES;
-
   if(isWin||isLose){
     setTimeout(()=>{
-      if(isWin){
-        const pip=document.querySelector(`#pips .pip:nth-child(${guessed.length})`);
-        if(pip){pip.classList.remove('used');pip.classList.add('correct');}
-      }
-      // update stats (only for real daily, not archive)
+      if(isWin){const pip=document.querySelector(`#pips .pip:nth-child(${guessed.length})`);if(pip){pip.classList.remove('used');pip.classList.add('correct');}}
       if(mode==='daily'&&!archiveDate){
         const s=getStats();s.played++;
         if(isWin){s.won++;s.dist[guessed.length-1]=(s.dist[guessed.length-1]||0)+1;}
         setStats(s);
-        if(isWin){
-          const ns=getStreak()+1;setStreak(ns);if(ns>getBestStreak())setBestStreak(ns);
-        } else {setStreak(0);}
+        if(isWin){const ns=getStreak()+1;setStreak(ns);if(ns>getBestStreak())setBestStreak(ns);}
+        else setStreak(0);
       }
-      saveState();
-      finishGame(isWin,false);
-    },TILE_FLIP_DURATION);
-  } else {
-    updateGuessesLeft();
-    saveState();
-  }
+      saveState();finishGame(isWin,false);
+    },FLIP_DONE);
+  } else {updateGuessesLeft();saveState();}
 }
 
-// ── SEARCH ──
 const searchEl=document.getElementById('search');
 const ddEl=document.getElementById('dropdown');
 searchEl.addEventListener('input',()=>{
@@ -713,20 +593,15 @@ searchEl.addEventListener('input',()=>{
   ddEl.innerHTML=matches.map(c=>`<div class="drop-item" role="option" data-name="${c.name}">${c.name}</div>`).join('');
   ddEl.style.display='block';
 });
-ddEl.addEventListener('click',e=>{
-  const item=e.target.closest('.drop-item');if(!item)return;
-  const char=CHARS.find(c=>c.name===item.dataset.name);if(char)submitGuess(char);ddEl.style.display='none';
-});
+ddEl.addEventListener('click',e=>{const item=e.target.closest('.drop-item');if(!item)return;const char=CHARS.find(c=>c.name===item.dataset.name);if(char)submitGuess(char);ddEl.style.display='none';});
 searchEl.addEventListener('keydown',e=>{
   if(e.key==='Enter'){const first=ddEl.querySelector('.drop-item');if(first){const char=CHARS.find(c=>c.name===first.dataset.name);if(char){submitGuess(char);ddEl.style.display='none';}}}
   if(e.key==='Escape')ddEl.style.display='none';
 });
 document.addEventListener('click',e=>{if(!e.target.closest('.search-wrap'))ddEl.style.display='none';});
 
-// ── BOOT ──
 document.getElementById('streak-display').textContent=getStreak();
-mode='daily';
-document.getElementById('date-label').textContent=formatDate();
+mode='daily';document.getElementById('date-label').textContent=formatDate();
 initGame();
 setTimeout(()=>searchEl.focus(),300);
 </script>
